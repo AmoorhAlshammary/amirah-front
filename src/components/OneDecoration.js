@@ -23,7 +23,7 @@ function OneDecoration({token, user}) {
       const getOneDecoration = async ()=>{
           if(token){
             // console.log("kkkkkk");
-            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/${id}`, { headers: { authorization: `Bearer ${token}` } });
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/decoration/${id}`, { headers: { authorization: `Bearer ${token}` } });
             // console.log(response.data);
             setDecorationId(response.data.oneDecoration._id);
             setName(response.data.oneDecoration.name);
